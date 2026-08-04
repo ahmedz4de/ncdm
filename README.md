@@ -1,2 +1,2 @@
-# ncdm
-NCurses Display Manager
+# nclm
+NCurses Login Manager
