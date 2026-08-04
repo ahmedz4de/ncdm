@@ -1,2 +1,2 @@
 # nclm
-NCurses Login Manager
+NCurses Login Manager - in development.
