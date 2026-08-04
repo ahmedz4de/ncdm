@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     int cols, rows;
     getmaxyx(stdscr, cols, rows);
 
-    WINDOW *win = create_centered_window(12, 64);
+    WINDOW *win = newwin(12, 64, (cols - 12) / 2, (rows - 64) / 2);
     box(win, 0, 0);
 
     mvwprintw(win, 0, 2, "%s", hostname);
@@ -40,14 +40,4 @@ int main(int argc, char *argv[]) {
     endwin();
 
     return 0;
-}
-
-WINDOW *create_centered_window(int height, int width) {
-    int rows, cols;
-    getmaxyx(stdscr, rows, cols);
-
-    int starty = (rows - height) / 2;
-    int startx = (cols - width) / 2;
-
-    return newwin(height, width, starty, startx);
 }
