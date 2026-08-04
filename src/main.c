@@ -8,36 +8,6 @@ WINDOW *create_centered_window(int height, int width);
 
 int main(int argc, char *argv[]) {
 
-    /*
-    char msg1[] = "username: ";
-    char user[64];
-    int userX, userY;
-    char msg2[] = "password: ";
-    char pass[64];
-    int passX, passY;
-    int rows, cols;
-
-    initscr();
-    raw();
-    getmaxyx(stdscr, rows, cols);
-
-    mvprintw(rows/2-1, (cols-10-strlen(msg1))/2, "%s", msg1);
-    getyx(stdscr, userY, userX);
-    mvprintw(rows/2+1, (cols-10-strlen(msg2))/2, "%s", msg2);
-    getyx(stdscr, passY, passX);
-
-    move(userY, userX);
-    getstr(user);
-    move(passY, passX);
-    noecho();
-    getstr(pass);
-    echo();
-
-    refresh();
-
-    endwin();
-    */
-
     char hostname[64];
     gethostname(hostname, sizeof(hostname));
     char msg0[] = "session: tty";
